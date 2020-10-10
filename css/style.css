@@ -8,14 +8,19 @@
 body,
 html {
     position: relative;
+     
 }
 
+#home{
+    padding-top: 65px;
+}
 #header {
     position: fixed;
     top: 0;
     width: 100%;
     background-color: white;
-    z-index: 999999999;
+    z-index: 4;
+    box-shadow: 5px 5px 5px #0005;
 }
 
 #header .nav-item {}
@@ -565,7 +570,7 @@ h3.blog_head {
     position: absolute;
     width: 60%;
     margin: 0 15%;
-    z-index: 1111111111;
+    z-index: 2;
     top: 135px;
     left: 0;
     padding: 50px 60px 70px;
@@ -813,7 +818,6 @@ footer .copyright p {
     /* navbar */
 
     .navbar ul {
-        background-color: #4fcaff;
     }
 
     .navbar ul li {
@@ -1057,7 +1061,7 @@ footer .item h4 {
         position: absolute;
         width: 70%;
         margin: 0 15%;
-        z-index: 1111111111;
+        z-index: 3;
         top: 0;
         left: 0;
         padding: 50px 60px 70px;
