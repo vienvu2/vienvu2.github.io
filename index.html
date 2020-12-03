@@ -16,7 +16,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-6">
-                    <img src="/image/logo.png" width="340px" class="mb-5" />
+                    <img class="logo" src="/image/logo.png" width="340px" class="mb-5" />
                     <img src="/image/product-main.png" width="480px" class="mb-5"
                         style="z-index: 1;  position: relative;" />
                     <img src="/image/slogan.png" style="width: 130%; max-width: 130%;" class="mb-5" />
@@ -27,19 +27,21 @@
                         <a href="#thongtin">THÔNG SỐ KỸ THUẬT</a>
                         <a href="#quatrian">NHẬN QUÀ TRI ÂN</a>
                     </div>
-                    <a class="phone">
+                    <a class="phone" href="tel:19006086">
                         <img src="/image/phone.png"
                             style="filter: invert(94%) sepia(19%) saturate(4229%) hue-rotate(334deg) brightness(88%) contrast(94%);" />
                         1900 6086
                     </a>
-                    <div class="mpthuy">
-                        <img class="bg" src="image/bg-mpthuy.png" />
-                        <img src="image/mpthuy.png" />
-                        <img style="position: absolute; left: -41px; top: 81px" src="image/touch.png" />
-                    </div>
-                    <div class="touch text-center">
+
+                    <div class="touch">
+                        
+                        <div class="mpthuy">
+                            <img class="bg" src="image/bg-mpthuy.png" />
+                            <img class="model" src="image/mpthuy.png" />
+                            <img class="hand" src="image/touch.png" />
+                        </div>
                         <a>ẤN ĐỂ KHÁM PHÁ <div class="triangle"> </div></a>
-                        <div class="remote mt-2">
+                        <div class="remote">
                             <img class="top-light" src="/image/light.png" />
                             <img src="/image/remote.png" />
                             <img class="bottom-light" src="/image/light.png" />
@@ -261,9 +263,13 @@
                     <img src="image/tuhao.png" />
                 </div>
                 <div class="col-md-8 pt-4">
-                    <div class="d-flex mb-3">
-                        <img src="image/fb.png" />
-                        <img src="image/youtube.png" class="ml-3" />
+                    <div class="social mb-3">
+                        <a href="https://facebook.com" target="_blank">
+                            <img src="image/fb.png" />
+                        </a>
+                        <a href="https://youtube.com"  target="_blank">
+                            <img src="image/youtube.png" class="ml-3" />
+                        </a>
                     </div>
                     <div class="lienhe">
                         <a href="telto:18006668">
@@ -337,21 +343,12 @@
             responsive: [{
                     breakpoint: 1024,
                     settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
-                        infinite: true,
-                        dots: true
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
                         slidesToShow: 2,
-                        slidesToScroll: 2
+                        slidesToScroll: 2,
                     }
                 },
                 {
-                    breakpoint: 480,
+                    breakpoint: 680,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1
