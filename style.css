@@ -179,7 +179,18 @@ html{
 #footer {
     background-color: #dab326;
 }
-
+#footer a{
+    color: white;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    margin: 0 10px;
+    font-weight: bold;
+}
+#footer .lienhe{
+    display: flex;
+    align-items: center;
+}
 .mpthuy {
     position: absolute;
     bottom: 0;
@@ -266,14 +277,13 @@ html{
     color: #eee;
     text-transform: uppercase;
     font-size: 24px;
-    margin-bottom: 50px;
-
+    margin-bottom: 23px;
 }
 
 #quatrian .form {
     background: #fff2;
-    margin: 0 -15px;
-    padding: 30px 20px;
+    margin: -15px;
+    padding: 20px 20px;
     border-radius: 20px;
 }
 
@@ -305,7 +315,7 @@ html{
     display: inline-block;
     background: #dab326;
     margin-bottom: 20px;
-    margin-top: 60px;
+    margin-top: 50px;
     border-radius: 40px;
     display: inline-block;
     border: 0;
@@ -436,4 +446,50 @@ html{
     bottom: 50px;
     right: 50px;
     display: none;
+}
+#thongtin .info{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 50px;
+
+}
+#thongtin .info h3{
+    font-weight: 900;
+    color: #dbb227;
+    font-size: 22px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+#thongtin .info p{
+    color: #eee;
+    font-size: 16px;
+    margin: 0;
+    /* width: 80%; */
+}
+#thongtin .info  img{
+    margin-right: 24px;
+}
+
+#dialog{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1111;
+    background: #0004;
+}
+#dialog > div{
+    max-width: 800px;
+    margin: 30px auto;
+    background: #555;
+    overflow: auto;
+    padding: 20px;
+    height: calc(100vh - 60px);
+}
+#dialog img{
+    margin-bottom: 20px;
 }
