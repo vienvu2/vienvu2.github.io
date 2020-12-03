@@ -1,40 +1,40 @@
-@font-face{
+@font-face {
     font-family: 'SFD';
     src: url(/font/SanFranciscoDisplay-Black.otf);
     font-weight: 800;
 }
 
-@font-face{
+@font-face {
     font-family: 'SFD';
     src: url(/font/SanFranciscoDisplay-Bold.otf);
     font-weight: 700;
 }
 
-@font-face{
+@font-face {
     font-family: 'SFD';
     src: url(/font/SanFranciscoDisplay-Heavy.otf);
     font-weight: 900;
 }
 
-@font-face{
+@font-face {
     font-family: 'SFD';
     src: url(/font/SanFranciscoDisplay-Light.otf);
     font-weight: 300;
 }
 
-@font-face{
+@font-face {
     font-family: 'SFD';
     src: url(/font/SanFranciscoDisplay-Medium.otf);
     font-weight: 600;
 }
 
-@font-face{
+@font-face {
     font-family: 'SFD';
     src: url(/font/SanFranciscoDisplay-Regular.otf);
     font-weight: 400;
 }
 
-@font-face{
+@font-face {
     font-family: 'SFD';
     src: url(/font/SanFranciscoDisplay-Thin.otf);
     font-weight: 200;
@@ -53,9 +53,10 @@ body,
 html {
     background: black;
     overflow-x: hidden;
-   
+
 }
-html{
+
+html {
     font-family: 'SFD';
     font-size: 14px;
 }
@@ -121,7 +122,7 @@ html{
     position: absolute;
     margin-top: 7px;
     margin-left: 5px;
-    
+
 }
 
 #header .touch a {
@@ -159,8 +160,13 @@ html{
     padding: 120px 0 220px 0;
 }
 
+#dieukhien .remote-2 {
+    max-width: 130%;
+    width: 130%;
+}
+
 #gioithieu {
-    padding: 90px 0;
+    padding-bottom: 90px;
     background-color: #818285;
 }
 
@@ -179,7 +185,8 @@ html{
 #footer {
     background-color: #dab326;
 }
-#footer a{
+
+#footer a {
     color: white;
     display: flex;
     font-size: 20px;
@@ -187,10 +194,12 @@ html{
     margin: 0 10px;
     font-weight: bold;
 }
-#footer .lienhe{
+
+#footer .lienhe {
     display: flex;
     align-items: center;
 }
+
 .mpthuy {
     position: absolute;
     bottom: 0;
@@ -343,9 +352,10 @@ html{
 }
 
 /* .slider-home .slick-dots, */
-.slick-arrow{
+.slick-arrow {
     cursor: pointer;
 }
+
 .slider-home .slick-next.slick-arrow,
 .slider-home .slick-prev.slick-arrow {
     position: absolute;
@@ -384,10 +394,12 @@ html{
     padding-inline-start: 0;
     left: calc(50% - 50px);
 }
+
 .slider-home .slick-dots li {
     display: inline-block;
 }
-.slider-home .slick-dots li button{
+
+.slider-home .slick-dots li button {
     height: 10px;
     width: 10px;
     margin: 10px 5px;
@@ -398,7 +410,8 @@ html{
     padding: 0;
     opacity: 0.5;
 }
-.slider-home .slick-dots li.slick-active button{
+
+.slider-home .slick-dots li.slick-active button {
     opacity: 1;
 }
 
@@ -435,25 +448,28 @@ html{
     background-color: transparent;
     transform: rotateZ(90deg)
 }
+
 .slick-dots li button:focus,
 .slick-prev:focus,
 .slick-next:focus {
     outline: 0;
 }
 
-.go-to-top{
+.go-to-top {
     position: fixed;
     bottom: 50px;
     right: 50px;
     display: none;
 }
-#thongtin .info{
+
+#thongtin .info {
     display: flex;
     align-items: flex-start;
     margin-top: 50px;
 
 }
-#thongtin .info h3{
+
+#thongtin .info h3 {
     font-weight: 900;
     color: #dbb227;
     font-size: 22px;
@@ -462,17 +478,18 @@ html{
     margin-bottom: 10px;
 }
 
-#thongtin .info p{
+#thongtin .info p {
     color: #eee;
     font-size: 16px;
     margin: 0;
     /* width: 80%; */
 }
-#thongtin .info  img{
+
+#thongtin .info img {
     margin-right: 24px;
 }
 
-#dialog{
+#dialog {
     display: none;
     position: fixed;
     top: 0;
@@ -482,7 +499,8 @@ html{
     z-index: 1111;
     background: #0004;
 }
-#dialog > div{
+
+#dialog>div {
     max-width: 800px;
     margin: 30px auto;
     background: #555;
@@ -490,6 +508,35 @@ html{
     padding: 20px;
     height: calc(100vh - 60px);
 }
-#dialog img{
+
+#dialog img {
     margin-bottom: 20px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #footer {
+        text-align: center;
+    }
+
+    #footer .lienhe {
+        flex-direction: column;
+    }
+
+    br {
+        display: none;
+    }
+
+    #quatrian .form {
+        margin: 0 20px
+    }
+
+    iframe {
+        height: 300px;
+    }
+    #dieukhien .remote-2 {
+        max-width: 100%;
+        width: 100%;
+        margin-top: 50px;
+    }
 }
