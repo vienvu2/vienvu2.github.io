@@ -205,7 +205,7 @@ html {
 
 #header .remote:before {
     height: 200px;
-    /* content: ''; */
+    content: '';
     top: -20px;
     width: 400px;
     position: absolute;
@@ -250,10 +250,12 @@ html {
 }
 
 .mpthuy .bg {
+    width: 180%;
+    max-width: 180%;
     position: absolute;
     top: 31%;
     mix-blend-mode: lighten;
-    right: -20%;
+    right: -45%;
 }
 
 #header .touch a {
@@ -503,7 +505,7 @@ html {
 
 #gioithieu h3 {
     font-size: 18px;
-    color: #eee;
+    color: #fff;
     margin-bottom: 30px;
     text-align: justify;
 }
@@ -511,7 +513,7 @@ html {
 #gioithieu p {
     text-align: justify;
     font-size: 14px;
-    color: #eee;
+    color: #fff;
 
 }
 
@@ -530,7 +532,7 @@ html {
 #tintuc h1,
 #quatrian h1 {
     font-weight: 900;
-    color: #eee;
+    color: #fff;
     text-transform: uppercase;
     font-size: 40px;
 
@@ -538,7 +540,7 @@ html {
 
 #quatrian h3 {
     font-weight: 900;
-    color: #eee;
+    color: #fff;
     text-transform: uppercase;
     font-size: 25px;
     text-align: center;
@@ -550,7 +552,7 @@ html {
 #tintuc h4,
 #quatrian h4 {
     font-weight: normal;
-    color: #eee;
+    color: #fff;
     text-transform: uppercase;
     font-size: 24px;
     margin-bottom: 23px;
@@ -728,6 +730,7 @@ html {
     right: 50px;
     display: none;
 }
+
 #thongtin {
     position: relative;
 }
@@ -749,14 +752,20 @@ html {
 }
 
 #thongtin .info p {
-    color: #eee;
+    color: #fff;
     font-size: 16px;
     margin: 0;
-    /* width: 80%; */
+    width: 80%;
 }
 
 #thongtin .info img {
     margin-right: 24px;
+}
+
+
+#thongtin .info.info-long p {
+    margin-right: 24px;
+    width: 100%;
 }
 
 #dialog {
@@ -791,6 +800,30 @@ html {
     margin-bottom: 40px;
 }
 
+#dieukhien .remote-2 {
+    position: relative;
+}
+
+#remote-1 {
+    position: absolute;
+    top: 61.7%;
+    height: 10%;
+    left: 21%;
+}
+
+#remote-2 {
+    position: absolute;
+    left: 37.7%;
+    height: 10.1%;
+    top: 61.5%;
+}
+
+#remote-3 {
+    position: absolute;
+    height: 10.1%;
+    left: 29%;
+    top: 61.7%;
+}
 
 @media only screen and (max-width: 768px) {
     #footer {
