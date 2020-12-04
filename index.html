@@ -34,13 +34,12 @@
                     </a>
 
                     <div class="touch">
-
                         <div class="mpthuy">
                             <img class="bg" src="image/bg-mpthuy.png" />
                             <img class="model" src="image/mpthuy.png" />
                             <img class="hand" src="image/touch.png" />
                         </div>
-                        <a>ẤN ĐỂ KHÁM PHÁ <div class="triangle updown"> </div></a>
+                        <a href="#gioithieu">ẤN ĐỂ KHÁM PHÁ <div class="triangle updown"> </div></a>
                         <div class="remote">
                             <img class="top-light" src="/image/light.png" />
                             <img src="/image/remote.png" />
@@ -84,7 +83,7 @@
                 <div class="col-md-4">
                     <div class="remote-2">
                         <img src="/image/remote-2.png" />
-                        <img id="remote-1"  src="/image/remote-2-1.png" />
+                        <img id="remote-1" src="/image/remote-2-1.png" />
                         <img id="remote-2" src="/image/remote-2-2.png" />
                         <img id="remote-3" src="/image/remote-2-3.png" />
                     </div>
@@ -177,7 +176,7 @@
                 <iframe width="100%" height="600" src="https://www.youtube.com/embed/wYv3Ir9DDZ4" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-                <div style="height: 4px; background: white; margin: 50px 0"></div>
+                <div style="height: 4px; background: white; margin: 50px 0;"></div>
             </div>
 
         </section>
@@ -197,10 +196,12 @@
                     <div class="col-md-3">
                         <h3>Đăng ký <br /> nhận quà tri ân</h3>
                         <div class="form">
-                            <form class="text-center">
-                                <input name="name" placeholder="Họ và tên" class="form-control" />
-                                <input name="phone" placeholder="Số điện thoại" class="form-control" />
-                                <input name="address" placeholder="Địa chỉ nhận quà" class="form-control" />
+                            <form id="form" class="text-center">
+                                <input type="text" required name="name" placeholder="Họ và tên" class="form-control" />
+                                <input type="text" required name="phone" placeholder="Số điện thoại"
+                                    class="form-control" />
+                                <input type="text" required name="address" placeholder="Địa chỉ nhận quà"
+                                    class="form-control" />
                                 <img src="image/promo.png" />
                                 <p class="text-center">
                                     <strong>Bình giữ nhiệt cao cấp<br />
@@ -317,23 +318,9 @@
     </a>
 
     <div id="dialog">
+        <h3 style="margin: 10px auto; text-align: center; color: white">Thông số kỹ thuật</h3>
         <div>
-            <img src="image/hdsd1.jpg" />
-            <img src="image/hdsd2.jpg" />
-            <img src="image/hdsd3.jpg" />
-            <img src="image/hdsd4.jpg" />
             <img src="image/hdsd5.jpg" />
-            <img src="image/hdsd6.jpg" />
-            <img src="image/hdsd7.jpg" />
-            <img src="image/hdsd8.jpg" />
-            <img src="image/hdsd9.jpg" />
-            <img src="image/hdsd10.jpg" />
-            <img src="image/hdsd11.jpg" />
-            <img src="image/hdsd12.jpg" />
-            <img src="image/hdsd13.jpg" />
-            <img src="image/hdsd14.jpg" />
-            <img src="image/hdsd15.jpg" />
-            <img src="image/hdsd16.jpg" />
         </div>
     </div>
 
@@ -347,6 +334,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
 </script>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script>
@@ -402,25 +391,40 @@
             e.preventDefault();
         });
 
-        $('#h-remote-1').mouseenter(function(){
+        $('#h-remote-1').mouseenter(function () {
             $('#remote-1').addClass('updown')
         })
-        $('#h-remote-1').mouseleave(function(){
+        $('#h-remote-1').mouseleave(function () {
             $('#remote-1').removeClass('updown')
         })
 
-        $('#h-remote-2').mouseenter(function(){
+        $('#h-remote-2').mouseenter(function () {
             $('#remote-2').addClass('updown')
         })
-        $('#h-remote-2').mouseleave(function(){
+        $('#h-remote-2').mouseleave(function () {
             $('#remote-2').removeClass('updown')
         })
 
-        $('#h-remote-3').mouseenter(function(){
+        $('#h-remote-3').mouseenter(function () {
             $('#remote-3').addClass('updown')
         })
-        $('#h-remote-3').mouseleave(function(){
+        $('#h-remote-3').mouseleave(function () {
             $('#remote-3').removeClass('updown')
+        })
+
+        $('#form').submit(function (e) {
+            Email.send({
+                Host: "smtp.yourisp.com",
+                Username: "username",
+                Password: "password",
+                To: 'them@website.com',
+                From: "you@isp.com",
+                Subject: "This is the subject",
+                Body: "And this is the body"
+            }).then(
+                message => alert('Không gởi  đc thông tin, xin thử lại')
+            );
+            event.preventDefault();
         })
     });
 </script>

@@ -210,14 +210,16 @@ html {
 }
 
 #header .remote:before {
-    height: 200px;
+    height: 100%;
     content: '';
-    top: -20px;
-    width: 400px;
+    top: -10%;
+    width: 134%;
     position: absolute;
-    left: -350px;
+    left: -117%;
     background-image: url(image/machdien.png);
     mix-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .touch .triangle {
@@ -237,7 +239,7 @@ html {
 
 .mpthuy {
     position: absolute;
-    top: 7%;
+    top: 1%;
     width: 70%;
     right: 4%;
     height: 100%;
@@ -264,6 +266,9 @@ html {
     right: -45%;
 }
 
+#header .touch{
+    margin-top: 40px;
+}
 #header .touch a {
     font-weight: bold;
     text-transform: uppercase;
@@ -271,6 +276,8 @@ html {
     padding: 5px 30px;
     font-size: 14px;
     display: block;
+    position: absolute;
+    top: -40px;
 }
 
 @keyframes around {
@@ -782,15 +789,14 @@ html {
     bottom: 0;
     right: 0;
     z-index: 1111;
-    background: #0004;
+    background: #000a;
 }
 
 #dialog>div {
     max-width: 800px;
-    margin: 30px auto;
+    margin: auto;
     background: #555;
     overflow: auto;
-    padding: 20px;
     height: calc(100vh - 60px);
 }
 
@@ -896,4 +902,15 @@ html {
         right: 30px;
         opacity: 0.4;
     }
+    .informations{
+        flex-direction: column;
+    }
+    .informations p{
+        width: 100%;
+    }
+}
+
+button:focus,
+button:active{
+    outline: 0!important;
 }
