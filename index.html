@@ -84,22 +84,22 @@
                 <div class="col-md-4">
                     <div class="remote-2">
                         <img src="/image/remote-2.png" />
-                        <img id="remote-1" src="/image/remote-2-1.png" />
+                        <img id="remote-1"  src="/image/remote-2-1.png" />
                         <img id="remote-2" src="/image/remote-2-2.png" />
                         <img id="remote-3" src="/image/remote-2-3.png" />
                     </div>
                 </div>
             </div>
             <div class="informations">
-                <div>
+                <div id="h-remote-1">
                     <img src="/image/infomation-1.png" class="mt-3" />
                     <p>Hẹn giờ bật tắt</p>
                 </div>
-                <div>
+                <div id="h-remote-2">
                     <img src="/image/infomation-2.png" class="mt-3" />
                     <p>Cài đặt nhiệt độ chính xác</p>
                 </div>
-                <div>
+                <div id="h-remote-3">
                     <img src="/image/infomation-3.png" class="mt-3" />
                     <p>Ghi nhớ thói quen sử dụng</p>
                 </div>
@@ -401,6 +401,27 @@
             e.stopPropagation();
             e.preventDefault();
         });
+
+        $('#h-remote-1').mouseenter(function(){
+            $('#remote-1').addClass('updown')
+        })
+        $('#h-remote-1').mouseleave(function(){
+            $('#remote-1').removeClass('updown')
+        })
+
+        $('#h-remote-2').mouseenter(function(){
+            $('#remote-2').addClass('updown')
+        })
+        $('#h-remote-2').mouseleave(function(){
+            $('#remote-2').removeClass('updown')
+        })
+
+        $('#h-remote-3').mouseenter(function(){
+            $('#remote-3').addClass('updown')
+        })
+        $('#h-remote-3').mouseleave(function(){
+            $('#remote-3').removeClass('updown')
+        })
     });
 </script>
 
