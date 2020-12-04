@@ -292,6 +292,36 @@ html {
     }
 }
 
+.informations {
+    display: flex;
+    position: relative;
+}
+
+.informations>div {
+    display: flex;
+    transition: linear 0.3s;
+    align-items: center;
+}
+
+.informations>div:hover {
+    transform: scale(1.05);
+    transition: linear 0.3s;
+}
+
+.informations p {
+    color: #111;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 150px;
+    line-height: 30px;
+    margin-bottom: 0;
+    font-weight: 900;
+    font-size: 24px;
+    text-transform: uppercase;
+    cursor: default;
+
+}
+
 #header .remote .top-light {
     position: absolute;
     top: -11%;
@@ -299,11 +329,11 @@ html {
     mix-blend-mode: lighten;
     width: 30%;
     height: 30%;
-    -webkit-animation: around 3s ease-in-out infinite;
-    -moz-animation: around 3s ease-in-out infinite;
-    -ms-animation: around 3s ease-in-out infinite;
-    -o-animation: around 3s ease-in-out infinite;
-    animation: around 3s ease-in-out infinite;
+    -webkit-animation: around 3s linear infinite;
+    -moz-animation: around 3s linear infinite;
+    -ms-animation: around 3s linear infinite;
+    -o-animation: around 3s linear infinite;
+    animation: around 3s linear infinite;
 }
 
 #header .remote .bottom-light {
@@ -314,20 +344,53 @@ html {
     width: 30%;
     height: 30%;
 
-    -webkit-animation: around 3s ease-in-out infinite;
-    -moz-animation: around 3s ease-in-out infinite;
-    -ms-animation: around 3s ease-in-out infinite;
-    -o-animation: around 3s ease-in-out infinite;
-    animation: around 3s ease-in-out infinite;
+    -webkit-animation: around 3s linear infinite;
+    -moz-animation: around 3s linear infinite;
+    -ms-animation: around 3s linear infinite;
+    -o-animation: around 3s linear infinite;
+    animation: around 3s linear infinite;
     animation-delay: -1.5s;
 }
 
+
+@keyframes opacity {
+    0% {
+        opacity: 1;
+    }
+
+
+    50% {
+        opacity: 0.5;
+    }
+
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
 #dieukhien {
-    background-color: #dab326;
-    background-image: url(/image/bg-line.png);
-    background-size: cover;
-    background-repeat: no-repeat;
     padding: 120px 0 220px 0;
+    background-color: #dbb227;
+    position: relative;
+}
+
+#dieukhien::before {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/image/bg-line.png);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    -webkit-animation: opacity 3s ease-in-out infinite;
+    -moz-animation: opacity 3s ease-in-out infinite;
+    -ms-animation: opacity 3s ease-in-out infinite;
+    -o-animation: opacity 3s ease-in-out infinite;
+    animation: opacity 3s ease-in-out infinite;
+
 }
 
 #dieukhien .remote-2 {
@@ -341,10 +404,64 @@ html {
 }
 
 .bg-content {
-    background-repeat: no-repeat;
-    background-size: cover;
     background-color: #818285;
-    background-image: url(/image/bg-circle.png);
+    position: relative;
+}
+
+
+@-webkit-keyframes clock {
+    0% {
+        -webkit-transform: rotateZ(0deg);
+        -o-transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotateZ(360deg);
+        -o-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+    }
+
+
+}
+
+@keyframes clock {
+    0% {
+        -webkit-transform: rotateZ(0deg);
+        -o-transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotateZ(360deg);
+        -o-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+    }
+
+}
+
+.bg-content:before {
+    overflow: hidden;
+    position: absolute;
+    content: '';
+    height: 180vw;
+    width: 180vw;
+    top: 0;
+    left: -120vw;
+    /* left: 50%; */
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-color: #818285;
+    background-image: url(/image/c.png);
+    -webkit-animation: clock 90s linear infinite;
+    -moz-animation: clock 90s linear infinite;
+    -ms-animation: clock 90s linear infinite;
+    -o-animation: clock 90s linear infinite;
+    animation: clock 90s linear infinite;
+    mix-blend-mode: overlay;
+    opacity: 0.4;
+    z-index: 0;
+    pointer-events: none;
 }
 
 #quatrian {
@@ -367,7 +484,7 @@ html {
 
 #footer .lienhe {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 
@@ -483,7 +600,7 @@ html {
 }
 
 #quatrian .form button:hover {
-    background: #b49214;
+    background: rgb(234, 200, 80);
 }
 
 #quatrian .form p {
@@ -611,6 +728,9 @@ html {
     right: 50px;
     display: none;
 }
+#thongtin {
+    position: relative;
+}
 
 #thongtin .info {
     display: flex;
@@ -665,6 +785,10 @@ html {
 
 #footer .social {
     display: flex;
+}
+
+.logo {
+    margin-bottom: 40px;
 }
 
 
