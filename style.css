@@ -426,7 +426,7 @@ html * {
 }
 
 .bg-content {
-    background-color: #818285;
+    
     position: relative;
 }
 
@@ -461,16 +461,25 @@ html * {
     }
 
 }
-
-.bg-content:before {
+.bg-content{
     overflow: hidden;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: absolute;
+    left: 0;
+}
+.bg-content:before {
+    /* overflow: hidden; */
     position: absolute;
     content: '';
     height: 180vw;
     width: 180vw;
     top: 0;
+    left: 0;
+    transform-origin: center center;
     left: -120vw;
-    /* left: 50%; */
+    background-position: center;
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-color: #818285;
