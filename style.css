@@ -197,7 +197,7 @@ html * {
 
 #header .phone {
     color: #dab326;
-    font-weight: bold;
+    font-weight: 900;
     display: inline-block;
     font-size: 24px;
     margin: 10px 0;
@@ -519,29 +519,26 @@ html * {
     top: 0;
     position: absolute;
     left: 0;
+    mix-blend-mode: overlay;
 }
 
-.bg-content:before {
+.bg-content img {
     /* overflow: hidden; */
     position: absolute;
     content: '';
-    height: 180vw;
-    width: 180vw;
     top: 0;
-    left: 0;
+    left: -150%;
     transform-origin: center center;
-    left: -120vw;
-    background-position: center;
+    /* background-position: center; */
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-color: #818285;
-    background-image: url(/image/c.png);
+    /* background-image: url(/image/c.png); */
     -webkit-animation: clock 90s linear infinite;
     -moz-animation: clock 90s linear infinite;
     -ms-animation: clock 90s linear infinite;
     -o-animation: clock 90s linear infinite;
     animation: clock 90s linear infinite;
-    mix-blend-mode: overlay;
     opacity: 0.4;
     z-index: 0;
     pointer-events: none;
@@ -875,6 +872,7 @@ html * {
 
 #footer .social {
     display: flex;
+    padding-top: 30px;
 }
 
 .logo {
@@ -924,12 +922,12 @@ html * {
     }
 
     iframe {
-        height: 300px;
+        height: 250px;
     }
 
     #dieukhien .remote-2 {
-        max-width: 100%;
-        width: 100%;
+        width: 80%;
+        margin: auto;
         margin-top: 50px;
     }
 
@@ -943,21 +941,23 @@ html * {
 
     #header {
         padding-top: 20px;
-        background-size: 130%;
+        background-size: 100%;
+        background-position: bottom;
     }
 
     #header .touch {
-        height: calc(600px / 1.8);
-        width: calc(540px / 1.8);
+        height: calc(600px / 2.3);
+        width: calc(540px / 2.3);
         margin-top: 50px;
-        margin-left: -100px;
+        margin-left: -70px;
     }
 
     #header .logo {
-        margin-bottom: 170px;
+        margin-bottom: 130px;
     }
 
     #header .phone {
+        white-space: nowrap;
         font-size: 18px;
     }
 
@@ -967,17 +967,121 @@ html * {
     }
 
     .go-to-top {
-        bottom: 30px;
-        right: 30px;
-        opacity: 0.4;
+        bottom: 20px;
+        right: 20px;
     }
-
+    .go-to-top img{
+        width: 30px;
+    }
     .informations {
-        flex-direction: column;
+        /* flex-direction: column; */
+    }
+    .informations img{
+        width: 40px;
+        margin-top: 0 !important;
+    }
+    .informations> div{
+        width: 33%;
+    }
+    .informations p {
+        width: 60px;
+        font-size: 10px;
+        line-height: 10px;
+        margin-right: 0;
+        margin-left: 10px;
+    }
+    .slogan,
+    .product-main{
+        margin-bottom: 10px!important;
+    }
+    #header .touch a{
+        font-size: 10px;
+        padding: 0;
+        top: -27px;
+    }
+    #dieukhien{
+        padding: 140px 0;
+        padding-top: 40px;
+    }
+    #thongtin .info h3{
+        font-size: 18px;
+    }
+    #thongtin .info img{
+        width: 60px;
+    }
+    #thongtin .info p{
+        font-size: 12px;
+        width: 100%;
+    }
+    #thongtin .info{
+        margin-top: 30px;
+    }
+    #white-line{
+        height: 2px!important;
+    }
+    .slider-home .slick-next.slick-arrow, .slider-home .slick-prev.slick-arrow{
+        bottom: -40px;
+        width: 15px;
+        height: 15px;
+    }
+    .slider-home .slick-dots{
+        bottom: -43px;
+    }
+    #quatrian h3{
+        margin-top: 100px;
+    }
+    #quatrian br{
+        
+        display: block;
+    }
+    #quatrian .form button{
+        width: 100%;
+        padding: 10px ;
+        color: #000;
+        font-size: 20px;
+    }
+    #tintuc h1, #quatrian h1{
+        font-size: 30px;
+    }
+    #tintuc h4, #quatrian h4{
+        font-size: 16px;
+    }
+    .slider-tintuc .slick-next{
+        height: 30px;
+        width: 30px;
+    }
+    #tintuc{
+        padding: 40px 0;
+    }
+    .slider-home .slick-prev {
+        left: calc(50% - 53px);
     }
 
-    .informations p {
-        width: 100%;
+    .slider-home .slick-next {
+        left: calc(50% + 42px);
+    }
+    .slider-home .slick-dots{
+        left: calc(50% - 30px);
+    }
+    .slider-home .slick-dots li{
+        margin: -3px;
+    }
+    .bdk{
+        width: 80%;
+    }
+    #gioithieu h2{
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+    #gioithieu h3{
+        width: 90%;
+    }
+    #gioithieu p{
+        width: 90%;
+        font-size: 12px;
+    }
+    .bg-content img{
+        /* left: -230%; */
     }
 }
 
