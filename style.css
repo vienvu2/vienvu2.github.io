@@ -1084,6 +1084,9 @@ html * {
         right: -150%;
         left: unset;
     }
+    .lienhe{
+        padding-top: 20px;
+    }
 }
 
 button:focus,
