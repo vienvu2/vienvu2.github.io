@@ -855,14 +855,17 @@ html * {
     right: 0;
     z-index: 1111;
     background: #000a;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-height: calc(100vh);
 }
 
 #dialog>div {
     max-width: 800px;
-    margin: auto;
-    background: #555;
-    overflow: auto;
-    height: calc(100vh - 60px);
+    max-height: 100%;
 }
 
 #dialog img {
@@ -1086,6 +1089,9 @@ html * {
     }
     .lienhe{
         padding-top: 20px;
+    }
+    #dialog{
+        padding: 20px;
     }
 }
 
