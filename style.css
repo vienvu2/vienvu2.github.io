@@ -1,42 +1,48 @@
 @font-face {
-    font-family: 'SFD';
-    src: url(/font/SanFranciscoDisplay-Black.otf);
+    font-family: 'SanFranciscoDisplay';
+    src: url(/font/SanFranciscoDisplay-Black.ttf);
     font-weight: 800;
 }
 
 @font-face {
-    font-family: 'SFD';
-    src: url(/font/SanFranciscoDisplay-Bold.otf);
+    font-family: 'SanFranciscoDisplay';
+    src: url(/font/SanFranciscoDisplay-Bold.ttf);
     font-weight: 700;
 }
 
 @font-face {
-    font-family: 'SFD';
-    src: url(/font/SanFranciscoDisplay-Heavy.otf);
-    font-weight: 900;
-}
-
-@font-face {
-    font-family: 'SFD';
-    src: url(/font/SanFranciscoDisplay-Light.otf);
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: 'SFD';
-    src: url(/font/SanFranciscoDisplay-Medium.otf);
+    font-family: 'SanFranciscoDisplay';
+    src: url(/font/SanFranciscoDisplay-Semibold.ttf);
     font-weight: 600;
 }
 
 @font-face {
-    font-family: 'SFD';
-    src: url(/font/SanFranciscoDisplay-Regular.otf);
+    font-family: 'SanFranciscoDisplay';
+    src: url(/font/SanFranciscoDisplay-Heavy.ttf);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'SanFranciscoDisplay';
+    src: url(/font/SanFranciscoDisplay-Light.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'SanFranciscoDisplay';
+    src: url(/font/SanFranciscoDisplay-Medium.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'SanFranciscoDisplay';
+    src: url(/font/SanFranciscoDisplay-Regular.ttf);
     font-weight: 400;
 }
 
 @font-face {
-    font-family: 'SFD';
-    src: url(/font/SanFranciscoDisplay-Thin.otf);
+    font-family: 'SanFranciscoDisplay';
+    src: url(/font/SanFranciscoDisplay-Thin.ttf);
     font-weight: 200;
 }
 
@@ -147,7 +153,9 @@
     animation: rotating 1s ease-in-out infinite;
 }
 
-
+.semi-bold{
+    font-weight: 500;
+}
 
 img {
     max-width: 100%;
@@ -165,7 +173,7 @@ html {
 }
 
 html * {
-    font-family: 'SFD';
+    font-family: 'SanFranciscoDisplay';
 }
 
 #header {
@@ -326,7 +334,7 @@ html * {
     color: #111;
     margin-left: 20px;
     margin-right: 20px;
-    width: 150px;
+    width: 140px;
     line-height: 30px;
     margin-bottom: 0;
     font-weight: 900;
@@ -880,7 +888,7 @@ html * {
     #header .touch {
         height: calc(600px / 1.8);
         width: calc(540px / 1.8);
-        margin-top: 20px;
+        margin-top: 50px;
         margin-left: -100px;
     }
 
