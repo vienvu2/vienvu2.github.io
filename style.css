@@ -153,7 +153,7 @@
     animation: rotating 1s ease-in-out infinite;
 }
 
-.semi-bold{
+.semi-bold {
     font-weight: 500;
 }
 
@@ -201,6 +201,49 @@ html * {
     display: inline-block;
     font-size: 24px;
     margin: 10px 0;
+}
+
+.product-main {}
+
+
+@keyframes cheo {
+    0% {
+        top: -11%;
+        left: -14%;
+        opacity: 0;
+    }
+    1% {
+        top: -11%;
+        left: -14%;
+        opacity: 1;
+    }
+
+    99% {
+        top: 60%;
+        left: 80%;
+        opacity: 1;
+    }
+    100% {
+        top: 60%;
+        left: 80%;
+        opacity: 0;
+    }
+}
+
+.product-main .top-light {
+    position: absolute;
+    top: -11%;
+    left: -14%;
+    mix-blend-mode: lighten;
+    width: 30%;
+    opacity: 0;
+    height: 30%;
+    -webkit-animation: cheo 2s ease-out;
+    -moz-animation: cheo 2s ease 1;
+    -ms-animation: cheo 2s ease 1;
+    -o-animation: cheo 2s ease 1;
+    animation: cheo 2s ease 1;
+}
 }
 
 
@@ -273,9 +316,10 @@ html * {
     right: -45%;
 }
 
-#header .touch{
+#header .touch {
     margin-top: 40px;
 }
+
 #header .touch a {
     font-weight: bold;
     text-transform: uppercase;
@@ -374,7 +418,14 @@ html * {
     animation-delay: -1.5s;
 }
 
-
+#white-line{
+    transform: translateX(1000px);
+    transition: all 1s ease-in-out;
+}
+#white-line.show{
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
 @keyframes opacity {
     0% {
         opacity: 1;
@@ -426,7 +477,7 @@ html * {
 }
 
 .bg-content {
-    
+
     position: relative;
 }
 
@@ -461,7 +512,8 @@ html * {
     }
 
 }
-.bg-content{
+
+.bg-content {
     overflow: hidden;
     height: 100%;
     width: 100%;
@@ -469,6 +521,7 @@ html * {
     position: absolute;
     left: 0;
 }
+
 .bg-content:before {
     /* overflow: hidden; */
     position: absolute;
@@ -919,15 +972,17 @@ html * {
         right: 30px;
         opacity: 0.4;
     }
-    .informations{
+
+    .informations {
         flex-direction: column;
     }
-    .informations p{
+
+    .informations p {
         width: 100%;
     }
 }
 
 button:focus,
-button:active{
-    outline: 0!important;
+button:active {
+    outline: 0 !important;
 }

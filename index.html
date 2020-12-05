@@ -9,7 +9,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="/image/logo.png"/>
+    <link rel="icon" type="image/png" href="/image/logo.png" />
 </head>
 
 <body>
@@ -18,8 +18,11 @@
             <div class="row">
                 <div class="col-6">
                     <img class="logo" src="/image/logo.png" width="340px" class="mb-5" />
-                    <img src="/image/product-main.png" width="480px" class="mb-5"
-                        style="z-index: 1;  position: relative;" />
+                    <div class="product-main mb-5" style="z-index: 1;  position: relative;">
+                        <img src="/image/product-main.png" width="480px" />
+                        <img class="top-light" src="/image/light.png" />
+                    </div>
+
                     <img src="/image/slogan.png" style="width: 130%; max-width: 130%;" class="mb-5" />
                 </div>
                 <div class="col-6">
@@ -62,7 +65,8 @@
                 </div>
                 <div class="col-md-4 mt-5">
                     <h2>GIỚI THIỆU CHUNG</h2>
-                    <h3 class="semi-bold">Chiếm thị phần số 1 Việt Nam, Rossi là thương hiệu bình nước nóng được đông đảo người tiêu dùng
+                    <h3 class="semi-bold">Chiếm thị phần số 1 Việt Nam, Rossi là thương hiệu bình nước nóng được đông
+                        đảo người tiêu dùng
                         tin tưởng sử dụng trong nhiều năm.
                     </h3>
                     <p> Nhằm củng cố niềm tin của người dùng và không ngừng nâng cao
@@ -108,7 +112,7 @@
 
     </section>
     <div style="background-color: #818285; position: relative;">
-        <div class="bg-content" ></div>
+        <div class="bg-content"></div>
         <section id="thongtin">
             <div class="container ">
                 <div class="text-center">
@@ -167,7 +171,7 @@
                 </div>
                 <div class="text-center">
                     <a id="btnShow">
-                        <h2 >Thông số kỹ thuật chi tiết</h2>
+                        <h2>Thông số kỹ thuật chi tiết</h2>
                     </a>
                 </div>
 
@@ -178,7 +182,7 @@
                 <iframe width="100%" height="600" src="https://www.youtube.com/embed/wYv3Ir9DDZ4" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-                <div style="height: 4px; background: white; margin: 50px 0;"></div>
+                <div id="white-line" style="height: 4px; background: white; margin: 50px 0;"></div>
             </div>
 
         </section>
@@ -320,7 +324,9 @@
     </a>
 
     <div id="dialog">
-        <h3 style="font-size: 24px; text-transform: uppercase; font-weight: bold; margin: 10px auto; text-align: center; color: white">Thông số kỹ thuật</h3>
+        <h3
+            style="font-size: 24px; text-transform: uppercase; font-weight: bold; margin: 10px auto; text-align: center; color: white">
+            Thông số kỹ thuật</h3>
         <div>
             <img src="image/POPUP-THONGSO.jpg" />
         </div>
@@ -378,6 +384,13 @@
             } else {
                 $('.go-to-top').hide()
 
+            }
+            var hT = $('#white-line').offset().top,
+                hH = $('#white-line').outerHeight(),
+                wH = $(window).height(),
+                wS = $(this).scrollTop();
+            if (wS > (hT + hH - wH)) {
+                $('#white-line').addClass('show')
             }
         });
 
