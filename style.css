@@ -856,7 +856,7 @@ html * {
     z-index: 1111;
     background: #000a;
 
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     flex-direction: column;
