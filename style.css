@@ -718,7 +718,7 @@ html * {
     appearance: none !important;
     -moz-appearance: none;
     position: absolute;
-    bottom: 30px;
+    bottom: 17px;
     background-image: url(image/chervon.png);
     background-size: contain;
     background-position: center;
