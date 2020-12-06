@@ -1086,6 +1086,13 @@ html * {
     #quatrian h4 {
         font-size: 16px;
     }
+     #quatrian h4{
+         max-width: 250px;
+     }
+     #quatrian h1 {
+        max-width: 270px;
+
+     }
 
     .slider-tintuc .slick-prev,
     .slider-tintuc .slick-next {
@@ -1155,6 +1162,22 @@ html * {
     }
     .touch a{
         white-space: nowrap;
+    }
+    .info-1{
+        max-width: 220px!important;
+    }
+    .info-2{
+        max-width: 220px!important;
+    }
+    .info-3{
+        max-width: 160px!important;
+    }
+
+    .info-4{
+        max-width: 270px!important;
+    }
+    .info-5{
+        max-width: 270px!important;
     }
 }
 
