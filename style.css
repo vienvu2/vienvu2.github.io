@@ -915,6 +915,9 @@ html * {
     left: 29%;
     top: 61.7%;
 }
+#tintuc br:nth-child(2){
+    display: none;
+}
 
 @media only screen and (max-width: 768px) {
     #footer {
@@ -1104,6 +1107,9 @@ html * {
 
     #tintuc {
         padding: 40px 0;
+    }   
+    #tintuc br{
+        display: block!important;
     }
 
     .slider-home .slick-prev {
