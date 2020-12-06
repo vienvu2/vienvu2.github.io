@@ -212,6 +212,7 @@ html * {
         left: -14%;
         opacity: 0;
     }
+
     1% {
         top: -11%;
         left: -14%;
@@ -223,6 +224,7 @@ html * {
         left: 80%;
         opacity: 1;
     }
+
     100% {
         top: 60%;
         left: 80%;
@@ -417,14 +419,16 @@ html * {
     animation-delay: -1.5s;
 }
 
-#white-line{
+#white-line {
     transform: translateX(1000px);
     transition: all 1s ease-in-out;
 }
-#white-line.show{
+
+#white-line.show {
     transform: translateX(0);
     transition: all 1s ease-in-out;
 }
+
 @keyframes opacity {
     0% {
         opacity: 1;
@@ -705,18 +709,23 @@ html * {
 
 .slider-home .slick-next.slick-arrow,
 .slider-home .slick-prev.slick-arrow {
+    -webkit-appearance: none!important;
+    appearance: none!important;
+    -moz-appearance:    none;
     position: absolute;
     bottom: 30px;
-
     background-image: url(image/chervon.png);
     background-size: contain;
-    height: 30px;
-    width: 30px;
+    background-position: center;
+    height: 60px;
+    width: 60px;
+    max-width: 30px;
     color: transparent;
     border: none;
     background-color: transparent;
     z-index: 1;
-
+    transform-origin: center center;
+    background-repeat: no-repeat;
 }
 
 .slider-home .slick-prev {
@@ -957,6 +966,7 @@ html * {
 
     #header .logo {
         margin-bottom: 130px;
+        width: 180px;
     }
 
     #header .phone {
@@ -973,19 +983,25 @@ html * {
         bottom: 20px;
         right: 20px;
     }
-    .go-to-top img{
+
+    .go-to-top img {
         width: 30px;
+        height: 30px;
     }
+
     .informations {
         /* flex-direction: column; */
     }
-    .informations img{
+
+    .informations img {
         width: 40px;
         margin-top: 0 !important;
     }
-    .informations> div{
+
+    .informations>div {
         width: 33%;
     }
+
     .informations p {
         width: 60px;
         font-size: 10px;
@@ -993,105 +1009,146 @@ html * {
         margin-right: 0;
         margin-left: 10px;
     }
+
     .slogan,
-    .product-main{
-        margin-bottom: 10px!important;
+    .product-main {
+        margin-bottom: 10px !important;
     }
-    #header .touch a{
+
+    #header .touch a {
         font-size: 10px;
         padding: 0;
         top: -27px;
     }
-    #dieukhien{
+
+    #dieukhien {
         padding: 140px 0;
         padding-top: 40px;
     }
-    #thongtin .info h3{
+
+    #thongtin .info h3 {
         font-size: 18px;
     }
-    #thongtin .info img{
+
+    #thongtin .info img {
         width: 60px;
     }
-    #thongtin .info p{
+
+    #thongtin .info p {
         font-size: 12px;
         width: 100%;
     }
-    #thongtin .info{
+
+    #thongtin .info {
         margin-top: 30px;
     }
-    #white-line{
-        height: 2px!important;
+
+    #white-line {
+        height: 2px !important;
     }
-    .slider-home .slick-next.slick-arrow, .slider-home .slick-prev.slick-arrow{
+
+    .slider-home .slick-next.slick-arrow,
+    .slider-home .slick-prev.slick-arrow {
         bottom: -40px;
-        width: 15px;
-        height: 15px;
+        width: 30px;
+        height: 30px;
+        overflow: hidden;
+        background-size: 15px 15px;
+        /* background-repeat: no-repeat; */
     }
-    .slider-home .slick-dots{
-        bottom: -43px;
+
+    .slider-home .slick-dots {
+        bottom: -38px;
     }
-    #quatrian h3{
+
+    #quatrian h3 {
         margin-top: 100px;
     }
-    #quatrian br{
-        
+
+    #quatrian br {
+
         display: block;
     }
-    #quatrian .form button{
+
+    #quatrian .form button {
         width: 100%;
-        padding: 10px ;
+        padding: 10px;
         color: #000;
         font-size: 20px;
     }
-    #tintuc h1, #quatrian h1{
+
+    #tintuc h1,
+    #quatrian h1 {
         font-size: 30px;
     }
-    #tintuc h4, #quatrian h4{
+
+    #tintuc h4,
+    #quatrian h4 {
         font-size: 16px;
     }
-    .slider-tintuc .slick-next{
+
+    .slider-tintuc .slick-prev,
+    .slider-tintuc .slick-next {
         height: 30px;
         width: 30px;
+        background-repeat: no-repeat;
+        background-position: center center;
     }
-    #tintuc{
+
+    #tintuc {
         padding: 40px 0;
     }
+
     .slider-home .slick-prev {
-        left: calc(50% - 53px);
+        left: calc(50% - 63px);
     }
 
     .slider-home .slick-next {
-        left: calc(50% + 42px);
+        left: calc(50% + 32px);
     }
-    .slider-home .slick-dots{
+
+    .slider-home .slick-dots {
         left: calc(50% - 30px);
+        width: 60px;
     }
-    .slider-home .slick-dots li{
+
+    .slider-home .slick-dots li {
         margin: -3px;
     }
-    .bdk{
+
+    .bdk {
         width: 80%;
     }
-    #gioithieu h2{
+
+    #gioithieu h2 {
         font-size: 20px;
         padding: 10px 20px;
     }
-    #gioithieu h3{
+
+    #gioithieu h3 {
         width: 90%;
     }
-    #gioithieu p{
+
+    #gioithieu p {
         width: 90%;
         font-size: 12px;
     }
-    .bg-content img{
+
+    .bg-content img {
         right: -150%;
         left: unset;
     }
-    .lienhe{
+
+    .lienhe {
         padding-top: 20px;
     }
-    #dialog{
+
+    #dialog {
         padding: 20px;
+    }
+    #quatrian .form p{
+        width: 250px;
+        margin: 0 auto;
     }
 }
 
