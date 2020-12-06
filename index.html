@@ -125,21 +125,21 @@
                             <img src="/image/ic_6.png" />
                             <div>
                                 <h3>Bộ ổn nhiệt thế hệ mới</h3>
-                                <p>Công nghệ châu Âu, giúp bình hoạt động chính xác đến từng độ C</h3>
+                                <p style="max-width: 284px;">Công nghệ châu Âu, giúp bình hoạt động chính xác đến từng độ C</h3>
                             </div>
                         </div>
                         <div class="info">
                             <img src="/image/ic_2.png" />
                             <div>
                                 <h3>Ruột bình siêu bền</h3>
-                                <p>Tráng men kim cương nhân tạo, chống bong tróc, chống ăn mòn & chịu áp lực cao</h3>
+                                <p style="max-width: 291px;">Tráng men kim cương nhân tạo, chống bong tróc, chống ăn mòn & chịu áp lực cao</h3>
                             </div>
                         </div>
                         <div class="info">
                             <img src="/image/ic_1.png" />
                             <div>
                                 <h3>Đường xả cặn tiện ích </h3>
-                                <p>Tích hợp với thanh Magie đường kính lớn</h3>
+                                <p  style="max-width: 200px;">Tích hợp với thanh Magie đường kính lớn</h3>
                             </div>
                         </div>
 
@@ -149,7 +149,7 @@
                             <img src="/image/ic_3.png" />
                             <div>
                                 <h3>Bộ chống rò điện ELCB</h3>
-                                <p>Tích hợp bộ chống rò điện ELCB tiêu chuẩn châu Âu đảm bảo an toàn tuyệt đối cho người
+                                <p style="max-width: 300px;">Tích hợp bộ chống rò điện ELCB tiêu chuẩn châu Âu đảm bảo an toàn tuyệt đối cho người
                                     sử dụng</h3>
                             </div>
                         </div>
@@ -157,7 +157,7 @@
                             <img src="/image/ic_4.png" />
                             <div>
                                 <h3>Lớp bảo ôn giữ nhiệt</h3>
-                                <p>Lớp bảo ôn với vật liệu nhập khẩu cao cấp và được phun ở mật độ cao giúp giữ nhiệt
+                                <p>Lớp bảo ôn với vật liệu nhập khẩu cao cấp và được phun ở  mật độ cao giúp giữ nhiệt
                                     tối ưu</h3>
                             </div>
                         </div>
@@ -440,16 +440,27 @@
         })
 
         $('#form').submit(function (e) {
+            var dataRaw =  $('#form').serializeArray();
+            var data ={}
+            dataRaw.forEach(i=>{
+                data[i.name] =  i.value;
+            })
+            var body = 'Thông tin người đăng ký: <br />' + 
+            'Tên: '+  data.name + '<br />' +
+            'SĐT: '+  data.phone + '<br />' +
+            'Địa chỉ: '+  data.address + '<br />';
+            console.log(body);
             Email.send({
-                Host: "smtp.yourisp.com",
+                Host: "smtp.sendgrid.net",
+                Port: '587',
                 Username: "username",
                 Password: "password",
                 To: 'them@website.com',
                 From: "you@isp.com",
-                Subject: "This is the subject",
-                Body: "And this is the body"
+                Subject: "Đăng ký quà tri ân",
+                Body: body
             }).then(
-                message => alert('Không gởi  đc thông tin, xin thử lại')
+                message => alert(message)
             );
             event.preventDefault();
         })
