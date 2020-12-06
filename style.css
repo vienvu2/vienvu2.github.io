@@ -661,10 +661,15 @@ html * {
 }
 
 #quatrian .form img {
-    width: 120%;
-    max-width: 120%;
-    margin: 0 -10%;
+    width: 300px;
+    max-width: 300px;
+    margin-left: calc(50% - 150px);
     margin-bottom: -140px;
+}
+
+#quatrian .form p {
+    width: 250px;
+    margin-left: calc(50% - 125px);
 }
 
 #quatrian .form button {
@@ -709,9 +714,9 @@ html * {
 
 .slider-home .slick-next.slick-arrow,
 .slider-home .slick-prev.slick-arrow {
-    -webkit-appearance: none!important;
-    appearance: none!important;
-    -moz-appearance:    none;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    -moz-appearance: none;
     position: absolute;
     bottom: 30px;
     background-image: url(image/chervon.png);
@@ -915,8 +920,20 @@ html * {
     left: 29%;
     top: 61.7%;
 }
-#tintuc br:nth-child(2){
+
+#tintuc br:nth-child(2) {
     display: none;
+}
+
+@media only screen and (max-width: 992px) {
+    #quatrian .form img {
+        margin-left: 0;
+
+    }
+    #quatrian .form p {
+        margin: 0 auto;
+    }
+    
 }
 
 @media only screen and (max-width: 768px) {
@@ -1089,13 +1106,15 @@ html * {
     #quatrian h4 {
         font-size: 16px;
     }
-     #quatrian h4{
-         max-width: 250px;
-     }
-     #quatrian h1 {
+
+    #quatrian h4 {
+        max-width: 250px;
+    }
+
+    #quatrian h1 {
         max-width: 270px;
 
-     }
+    }
 
     .slider-tintuc .slick-prev,
     .slider-tintuc .slick-next {
@@ -1107,9 +1126,10 @@ html * {
 
     #tintuc {
         padding: 40px 0;
-    }   
-    #tintuc br{
-        display: block!important;
+    }
+
+    #tintuc br {
+        display: block !important;
     }
 
     .slider-home .slick-prev {
@@ -1159,31 +1179,38 @@ html * {
     #dialog {
         padding: 20px;
     }
-    #quatrian .form p{
+
+    #quatrian .form p {
         width: 250px;
         margin: 0 auto;
     }
+
     .touch .triangle {
         border-width: 5px;
     }
-    .touch a{
+
+    .touch a {
         white-space: nowrap;
     }
-    .info-1{
-        max-width: 220px!important;
-    }
-    .info-2{
-        max-width: 220px!important;
-    }
-    .info-3{
-        max-width: 160px!important;
+
+    .info-1 {
+        max-width: 220px !important;
     }
 
-    .info-4{
-        max-width: 270px!important;
+    .info-2 {
+        max-width: 220px !important;
     }
-    .info-5{
-        max-width: 270px!important;
+
+    .info-3 {
+        max-width: 160px !important;
+    }
+
+    .info-4 {
+        max-width: 270px !important;
+    }
+
+    .info-5 {
+        max-width: 270px !important;
     }
 }
 
