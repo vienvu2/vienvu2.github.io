@@ -1150,6 +1150,12 @@ html * {
         width: 250px;
         margin: 0 auto;
     }
+    .touch .triangle {
+        border-width: 5px;
+    }
+    .touch a{
+        white-space: nowrap;
+    }
 }
 
 button:focus,
