@@ -321,7 +321,7 @@ html * {
     margin-top: 40px;
 }
 
-#header .touch a {
+#header .touch p {
     font-weight: bold;
     text-transform: uppercase;
     color: white;
@@ -523,34 +523,32 @@ html * {
     top: 0;
     position: absolute;
     left: 0;
-    mix-blend-mode: overlay;
 }
 
 .bg-content img {
     /* overflow: hidden; */
+    height: 100%;
     position: absolute;
-    content: '';
+    /* width: 100%; */
+    /* content: ''; */
     top: 0;
     left: -150%;
-    transform-origin: center center;
-    /* background-position: center; */
-    background-repeat: no-repeat;
-    background-size: auto 100%;
     background-color: #818285;
-    /* background-image: url(/image/c.png); */
     -webkit-animation: clock 90s linear infinite;
     -moz-animation: clock 90s linear infinite;
     -ms-animation: clock 90s linear infinite;
     -o-animation: clock 90s linear infinite;
     animation: clock 90s linear infinite;
     opacity: 0.4;
-    z-index: 0;
+    /* z-index: 0; */
     pointer-events: none;
 }
 
 #quatrian {
     padding: 90px 0;
     background: #0005;
+    position: relative;
+    z-index: 1;
 }
 
 #footer {
@@ -951,13 +949,15 @@ html * {
     }
     
     #footer {
-        text-align: center;
+        /* text-align: center; */
     }
 
     #footer .lienhe {
         flex-direction: column;
     }
-
+    #footer img.logo{
+        margin: 0 10px;
+    }
     br {
         display: none;
     }
@@ -1048,7 +1048,7 @@ html * {
         margin-bottom: 10px !important;
     }
 
-    #header .touch a {
+    #header .touch p {
         font-size: 10px;
         padding: 0;
         top: -27px;
@@ -1202,7 +1202,7 @@ html * {
         border-width: 5px;
     }
 
-    .touch a {
+    .touch p {
         white-space: nowrap;
     }
 
