@@ -20,7 +20,6 @@
                     <img class="logo" src="/image/logo.png" width="340px" class="mb-5" />
                     <div class="product-main mb-5" style="z-index: 1;  position: relative;">
                         <img src="/image/product-main.png" width="480px" />
-                        <img class="top-light" src="/image/light.png" />
                     </div>
 
                     <img class="slogan" src="/image/slogan.png" style="width: 130%; max-width: 130%;" class="mb-5" />
@@ -360,6 +359,14 @@
         </div>
     </div>
 
+    <div id="success">
+        <div>
+            <h3>Đăng ký thành công</h3>
+            <p>Tân Á Đại Thành cám ởn bạn</p>
+            <button>Quay lại</button>
+        </div>
+    </div>
+
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
@@ -454,13 +461,16 @@
         $('#h-remote-3').mouseleave(function () {
             $('#remote-3').removeClass('updown')
         })
-
+        $('#success button').click(function(){
+            $('#success').hide()
+        })
         $('#form').submit(function (e) {
             var dataRaw = $('#form').serializeArray();
             var data = {}
             dataRaw.forEach(i => {
                 data[i.name] = i.value;
             })
+            $('.form button').attr('disabled', true)
             var body = 'Thông tin người đăng ký: <br />' +
                 'Tên: ' + data.name + '<br />' +
                 'SĐT: ' + data.phone + '<br />' +
@@ -476,7 +486,10 @@
                 Subject: "Đăng ký quà tri ân",
                 Body: body
             }).then(
-                message => alert(message)
+                message => {
+                    $('.form button').attr('disabled', false);
+                    $('#success').css('display', 'flex')
+                }
             );
             event.preventDefault();
         })

@@ -685,7 +685,9 @@ html * {
     cursor: pointer;
 
 }
-
+#quatrian .form button:disabled{
+    opacity: 0.4;
+}
 #quatrian .form button:hover {
     background: rgb(234, 200, 80);
 }
@@ -878,6 +880,7 @@ html * {
 #dialog>div {
     max-width: 800px;
     max-height: 100%;
+    margin: 0 auto;
 }
 
 #dialog img {
@@ -1229,4 +1232,45 @@ html * {
 button:focus,
 button:active {
     outline: 0 !important;
+}
+#success {
+    background: #0009;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+#success > div{
+    width: 400px;
+    max-width: 90%;
+    background-color: #eac446;
+    text-align: center;
+    padding:40px  20px;
+    border-radius: 20px;
+}
+
+#success  h3{
+    font-weight: bold;
+    font-size: 24px;
+}
+#success p{
+    font-size: 18px;
+
+}
+#success button{
+    background: white;
+    border: 0;
+    border-radius: 30px;
+    /* height: 50px; */
+    padding: 10px 40px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#success button:hover{
+    background: #eee;;
 }
